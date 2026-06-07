@@ -1,25 +1,29 @@
 # Gazebo_Terrain_Generator
-Step by step to generate 3D Gazebo terrain using real-world elevation and satellite data.
+Hướng dẫn từng bước tạo địa hình 3D cho vọng lâu bằng cách sử dụng dữ liệu độ cao thực tế và dữ liệu vệ tinh.
 
-> **Tip** MAVLink is very well suited for applications with very limited communication bandwidth. Its reference implementation in C is highly optimized for resource-constrained systems with limited RAM and flash memory. It is field-proven and deployed in many products where it serves as interoperability interface between components of different manufacturers.
+> **Tip** ....
 
+##🚀 Thực thi Gazebo World Generator
 
-## Features
+1. Navigate to gazebo_terrian_generator and start the applciation.
 
-Real-World Terrain Generation: Generate 3D Gazebo worlds using actual elevation data and satellite images of any location on Earth.
-3D Buildings: Add or remove buildings to the gazebo world with a toogle button.
-Configurable Spawn Location: Change the spawn location using interactive UI marker within the region of interest
-Configurable Output: Flexible output paths via environment variables for different deployment scenarios
-Customizable Resolution: Adjustable tile resolution.
-Complete World Generation: Generates the entire model with no hassle out of the box
+```bash
+export GAZEBO_MODEL_PATH="~/Desktop/gazebo_models"              # Option
+export GAZEBO_WORLD_PATH="~/Desktop/gazebo_models/worlds"       # Optino
+source terrain_generator/bin/activate
+python scripts/server.py
+```
 
-# Generate C headers 
-
-
-> **Note:** [Installing the MAVLink Toolchain](https://mavlink.io/en/getting_started/installation.html) explains how to install MAVLink on other Ubuntu platforms and Windows, while [Generating MAVLink Libraries](https://mavlink.io/en/getting_started/generate_libraries.html) explains how to build MAVLink for the other programming languages [supported by the project](https://mavlink.io/en/#supported_languages).
-> The sub-topics of [Using MAVLink Libraries](https://mavlink.io/en/getting_started/use_libraries.html) explain how to use the generated libraries.
+2. Access the Web Interface: Open your web browser and navigate to http://localhost:8080
 
 
-## Key Links
+##⚙️ Chức năng
+
+Tạo địa hình thực tế: Tạo thế giới Gazebo 3D bằng cách sử dụng dữ liệu độ cao thực tế và hình ảnh vệ tinh của bất kỳ vị trí nào trên Trái đất. Các tòa nhà 3D: Thêm hoặc xóa các tòa nhà vào thế giới Gazebo bằng nút chuyển đổi. Vị trí xuất hiện có thể cấu hình: Thay đổi vị trí xuất hiện bằng cách sử dụng điểm đánh dấu giao diện người dùng tương tác trong khu vực quan tâm. Đầu ra có thể cấu hình: Đường dẫn đầu ra linh hoạt thông qua các biến môi trường cho các kịch bản triển khai khác nhau. Độ phân giải có thể tùy chỉnh: Độ phân giải ô có thể điều chỉnh. Tạo thế giới hoàn chỉnh: Tạo toàn bộ mã ì mà không gặp rắc rối ngay từ đầu.
+
+##🔑 Mapbox API Key
+Đăng ký tài khoản tại MapBox (https://console.mapbox.com/). Lưu ý từ 2026, người dùng cần chuẩn bị thẻ Visa để cung cấp thông tin thanh toán cho trang web. Dĩ nhiên bạn sẽ không bị trừ tiền nếu tài nguyên bạn sử dụng không vượt quá plan miễn phí đã được cung cấp.
+
+## 🔗 Ref
 
 * [Documentation/Website](https://github.com/saiaravind19/gazebo_terrain_generator)
